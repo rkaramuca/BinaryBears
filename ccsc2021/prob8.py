@@ -11,20 +11,9 @@ for i in range(int(input())):
 	loc = curr[2::] 
 	loc = ' '.join(loc)
 	locs.append(loc)
-	rat = 0
-	for i in range(len(air)):
-		if temp == air[i]:
-			rat = ratio[i]
-			break
-		elif temp < air[i] and temp > air[i + 1]:
-			dif = air[i] + air[i + 1]
-			dif = int(dif / 2)
-			if temp > dif:
-				rat = ratio[i]
-				break
-			else:
-				rat = ratio[i + 1]
-				break
+	m = min(air, key=lambda x:abs(x-temp))
+	i = air.index(m)
+	rat = ratio[i]
 	w = float(snow * (1 / rat))
 	w = round(w, 1)
 	water.append(w)

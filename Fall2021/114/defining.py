@@ -19,6 +19,7 @@ for i in range(int(input())):
 	out = "% @ $ #"
 	preL = word[0:4]
 	pL = ""
+	#starts at the beginning of the word and checks for a prefix (start at 0 and increment to 4, the largest prefix size)
 	for i in range(len(preL)):
 		pL += preL[i]
 		if pL in pref:
@@ -31,6 +32,7 @@ for i in range(int(input())):
 				out = out.replace("%", pref[pL])
 				break
 
+	#check if a length-4, 3, 2, or 1 suffix exists in the suf dictionary
 	if word[-4:] in suf:
 		suff = word[-4:]
 		word = word[0:-4]
@@ -50,12 +52,15 @@ for i in range(int(input())):
 		out = out.replace("@", suf[suff])
 		word = word[0:-1]
 
+	#replace the $ position with the re-written word (word w/o prefix or suffix)
 	out = out.replace('$', word)
 	
+	#replace any left-over symbols with blanks, then strip spaces
 	out = out.replace('%', "")
 	out = out.replace('@', "")
 	out = out.replace('$', "")
 	out = out.replace('#', "")
 	out = out.strip()
+	#split the string by spaces then rejoin it with spaces between each element
 	out = " ".join(out.split())
 	print(out)

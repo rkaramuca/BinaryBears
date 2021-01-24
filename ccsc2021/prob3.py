@@ -20,7 +20,6 @@ for i in range(int(input())):
 	mid = 2 * 3.14159 * r * 4
 	brim = (3.14159 * ((r + 3) ** 2)) - (3.14159 * (r ** 2))	
 	area = top + mid + brim
-	
 	cost = "%.2f" % round(area * mats[mat], 2)
 	
 	print(f"Model {model} $ {cost}")

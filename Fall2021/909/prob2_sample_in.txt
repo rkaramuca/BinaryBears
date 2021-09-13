@@ -1,0 +1,13 @@
+P2
+#any comments go here and start with a pound sign.  
+#there can be multiple comment lines here but NOT in the rest of #the file.
+#the next line will have the number of columns then the number of #rows
+17 7
+255
+37 44 37 37 44 37 44 44 44 37 44 44 48 48 48 44 37 
+34 33 34 37 33 34 37 48 44 44 44 48 44 44 44 44 53 
+44 44 37 44 53 53 49 44 41 37 41 41 33 33 29 26 26 
+29 29 33 37 37 44 48 53 53 57 53 57 61 64 69 69 81 
+81 77 81 81 73 77 72 48 37 33 33 33 37 37 48 44 33 
+22 22 25 22 22 14 14 14 14 22 22 22 22 22 22 22 22 
+22 22 26 22 22 22 22 18 22 18 22 18 18 18 22 26 22
